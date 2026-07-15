@@ -4,30 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Welcome! </title>
-     <style>
-        #myHeader {
-            background-color: #ffd3d3;
-            color: #333;
-            padding: 32px;
-            text-align: center;
-        }
-        .note {
-            color: #ff0000;
-            font-weight: bold;
-        }
-    </style>
+        <link rel="stylesheet" href="example.css">
     </head>
 
     <body>
-        <h1 id="myHeader">예제모음~</h1>
-        <a href="태그.html" target="_blank">제목 관련 태그</a>
-        <br>
-        <a href="목록.html" target="_blank">목록 관련 태그</a>
-        <br>
-        <a href="표.html" target="_blank">테이블 관련 태그</a>
+        <main class="container">
+            <section class="card">
+                <h1 id="myHeader">예제모음~</h1>
+                <a href="태그.html" target="_blank">제목 관련 태그</a>
+                <br>
+                <a href="목록.html" target="_blank">목록 관련 태그</a>
+                <br>
+                <a href="표.html" target="_blank">테이블 관련 태그</a>
+            </section>
 
-        <h1>html forms</h1>
-        <form action="signupresult.php" method="post">
+            <section class="form">
+            <h1>html forms</h1>
+            <form action="signupresult.php" method="post">
             <fieldset>
                 <legend>회원가입</legend>
                 <p>
@@ -53,6 +46,9 @@
                 </p>
             </fieldset>
             <button type="submit">가입</button>
+            <!-- 버튼 못생겼음 -->
+            </section>
         </form>
+    </main>
     </body>
 </html>

@@ -1,0 +1,168 @@
+/* 1. 기본 스타일 초기화 (여백 없애고 크기 계산기 고정) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 2. 전체 배경 화면 설정 (차분하고 트렌디한 연한 회색 배경) */
+body {
+    background-color: #f3f4f6;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 3. 메인 컨테이너 (두 영역을 감싸는 전체 틀 - 모바일 반응형 설정) */
+.container {
+    width: 100%;
+    max-width: 500px; /* 화면이 아무리 커져도 스마트폰 크기 정도로 예쁘게 고정 */
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* 카드들 사이의 간격 */
+}
+
+/* 4. 카드 공통 스타일 (예제 모음 상자 & 회원가입 상자 둘 다 적용) */
+.card, .form {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px; /* 둥글둥글한 모서리 */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* 은은하고 고급스러운 그림자 */
+}
+
+/* 5. [예제모음] 카드 스타일 */
+#myHeader {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 16px;
+}
+
+.card a {
+    display: inline-block;
+    color: #4f46e5; /* 세련된 인디고 블루 색상 */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.card a:hover {
+    color: #312e81; /* 마우스 올렸을 때 더 진해짐 */
+    text-decoration: underline;
+}
+
+/* 6. [html forms] 타이틀 스타일 */
+.form h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+/* 7. 회원가입 필드셋 테두리 없애고 깔끔하게 정리 */
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* 입력창들 사이의 간격 */
+}
+
+legend {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+
+/* 8. 입력 폼 내부 줄바꿈 정렬 */
+p {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+/* 라벨 스타일 */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* 인풋(Input) & 셀렉트(Select) 박스 예쁘게 꾸미기 */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* 입력창을 클릭(포커스)했을 때 푸른빛 돌게 만들기 */
+input:focus, select:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* 필수 빨간 딱지 스타일 */
+small {
+    font-size: 11px;
+    color: #ef4444; /* 경고 빨간색 */
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+/* 이메일 영역 골뱅이(@) 줄바꿈 방지 및 정렬 */
+p:last-of-type {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+p:last-of-type label {
+    width: 100%; /* 라벨만 혼자 한 줄 차지하게 */
+}
+
+p:last-of-type input {
+    flex: 1; /* 이메일 입력칸이 남은 영역 다 차지하게 */
+    min-width: 120px;
+}
+
+p:last-of-type select {
+    width: auto;
+    flex: 1;
+}
+
+/* 9. 갱생 완료! 전혀 못생기지 않은 세련된 [가입 버튼] 버튼 스타일 🌟 */
+button[type="submit"] {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    background-color: #4f46e5; /* 포인트 인디고 색상 */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* 버튼 마우스 올렸을 때 & 클릭했을 때 피드백 효과 */
+button[type="submit"]:hover {
+    background-color: #4338ca;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98); /* 클릭하면 살짝 꾹 눌리는 효과 */
+}
